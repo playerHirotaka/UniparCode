@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1 papai!</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const n= 50
+            let arrNumeros =[]
+            let historico=[]
+            const alunos = ['Andrey Machado Castilho Peres',
+                'Angelo trento junior',
+                'Beatriz Brusiguello Gega',
+                'Bruno Leandro Caubianco',
+                'Bruno Leonardo Fernandes da Silva Camargo',
+                'CARLOS ROBERTO THEODORO JUNIOR',
+                'Carolline Pereira Marques',
+                'Cauâ Aparecido Torres',
+                'Daniel Sabino Honorio',
+                'Daniel Sanches Rodrigues',
+                'Danillo Leon Guilherme da Silva',
+                'Davi Pajeú Silvano',
+                'David Kalleby Felix Nascimento',
+                'Emanuely Marcato Boschen',
+                'Fábio Henrique',
+                'Fernando Eitiro Vedovelli Nishizawa',
+                'Gabriel da Costa Peres',
+                'Gabriel de Jesus Fávaro',
+                'Gabriel de Oliveira Srazerepci',
+                'Gabriel Dos Santos Serralvo',
+                'Gabriel Henrique de Souza Moreno',
+                'Gabriel Pereira Salmazzi',
+                'Geovana Schroeder de Souza',
+                'Glauter Júnior Alberico',
+                'GUILHERME da mata marion dos santos',
+                'Gustavo Henrique de OLiveira',
+                'Henrique Ruiz Machado',
+                'Igor Emanoel Cavalari da Silva',
+                'Ivan Toledo',
+                'Jalom Tamborelli Mincoff',
+                'Jéssica de Abreu do Carmo',
+                'JOAO PEDRO RUIZ RANUCCI DE OLIVEIRA',
+                'Julia Carolina Fanti Scarpim',
+                'Julia Ettore Martins ',
+                'Júlia Manzotti Marçal',
+                'Júlio César Abreu dos Santos',
+                'Kayke Henryque Canuto da Silva',
+                'Leandro Leal',
+                'Leonardo Marques Batista',
+                'leonardo vinicius costa regis',
+                'Letycia dos Santos David',
+                'Lucas Felipe da Silva',
+                'Lucas Renan Nascimento',
+                'Luiz Guilherme Pantaroti',
+                'MAICON LEAL BARBALHO',
+                'manuela s',
+                'Marcos Gabriel Zafalon',
+                'Matheus cruz kruger',
+                'Matheus Meireles Sakuno Pezzoti',
+                'Matheus xavier da silva',
+                'Natã Bergamasco Beraldo',
+                'Paulo Marcio Da Silva Sitineta',
+                'Pedro Araujo Affonço',
+                'Pedro Sabino Alves',
+                'Rafael aparecido belini',
+                'Thiago Pacheco dos Santos',
+                'Vinícius André Pereira Benites dos Santos',
+                'VITOR DA PAIXÃO DIAS',
+                'VITOR MARCELO ROSA',
+                'Weslley de Queiroz Gonçalves']
+                console.log(alunos);
+       
+            document.getElementById("random").addEventListener("click", function () {
+                if (alunos.length === 0) {
+                    alert('Não há mais alunos para serem sorteados!')
+                    return
+                }
+               
+                const randomIndex = Math.floor(Math.random() * alunos.length)
+                const resultado = alunos.splice(randomIndex, 1)[0]
+                historico.unshift(resultado)
+                document.getElementById("resultado").textContent = resultado
+                document.getElementById("historico").textContent = historico
+                //document.getElementById("historico").innerHTML = historico.join("<br>") 
+
+                //console.log(randomIndex)
+            })
+        })
+    </script>
+</head>
+<body>       
+        <div class="numseiconteiner">
+            <button id="random">Randomizar</button>
+            <p id="resultado">---------</p>
+            <p>HISTORICO</p>
+            <div class="quadrado">
+                   <p id="historico">--------- </p>  
+            </div>
+            </div>
+</body>
+</html>
